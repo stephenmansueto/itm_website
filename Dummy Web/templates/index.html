@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block head %} 
+
+<h1>  <FONT COLOR= '#4169e1'> <marquee scrolldelay = "20">  Welcome to Matteo Up </marquee> </font color> </h1>
+
+{% endblock %}
+
+{% block body %} 
+
+<div class="content">
+
+    <table>
+<h2> Choose a Room </h2>
+
+<tr>
+    <th>Task</th>
+    <th>Added</th>
+    <th>Actions</th>
+</tr>
+{% for task in tasks %}
+<tr>
+    <td>{{ task.content }}</td>
+    <td>{{ task.date_created.date() }}</td>
+
+            <td>
+                <a href="templates/room_c.html">Room C</a>
+                <br>
+                <a href="templates/room_d.html">Room D</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <form action="/" method="POST">
+        <input type="text" name="content" id="content">
+        <input type="submit" value="Go">
+        </input>
+        </input>
+    </form>
+
+</div>
+
+{% endblock %}
+

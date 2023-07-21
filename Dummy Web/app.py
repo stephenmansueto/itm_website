@@ -188,4 +188,4 @@ def D13():
     return render_template('D13.html')
 
 if __name__ == "__main__":
-    app.run(debug = True)
+    app.run(debug = True, port=8080)

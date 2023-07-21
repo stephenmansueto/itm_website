@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <title> Matteo Table Reservation </title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='my-reservations.css') }}">
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <a href="/templates/welcome-page.html">
+                <img alt="Image" class="nav-logo">
+            </a>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="/templates/about.html">ABOUT</a></li>
+                    <li><a href="/templates/reserve-table.html">RESERVE A TABLE</a></li>
+                    <li><a href="/templates/my-reservations.html">MY RESERVATIONS</a></li>
+                </ul>
+            </div>
+        </nav>
+        <table class="tebol">
+        <form action="/submit" method="POST">    
+            <tr class="table_header">
+                <th width="250px" height="60px" colspan="2"><h3 style="color:white;font-family:trebuchet ms">Book your reservation!</h3></th>
+            </tr>
+            <tr>
+                <td width="250px" height="35px" style="padding-top:30px;">ID Number</td>
+                <td style="padding-top:35px;"><input type="number" id="id" name="id" style="width: 300px; height: 30px; padding-left:5px; font-size:15px;"></td>
+            </tr>
+            <tr>
+                <td width="250px" height="30px">Last Name</td>
+                <td><input type="text" id="surname" name="surname" style="width: 300px; height: 30px; padding-left:5px; font-size:15px;"></td>
+            </tr>
+            <tr>
+                <td width="250px" height="30px">Date of Reservation</td>
+                <td><input type="date" id="dateofres" name="dateofres" style="width: 300px; height: 30px; padding-left:5px; font-size:15px;"></td>
+            </tr>
+            <tr>
+                <td width="250px" height="30px">Time</td>
+                <td><label style="font-size:13px;">From &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To</label><br><input type="time" id="time_start" name="time_start" style="width: 144px; height: 30px;"> 
+                    <input type="time" id="time_end" name="time_end" style="width: 144px; height: 30px; padding-left:5px; font-size:15px;"> </td>
+            </tr>
+            <tr>
+                <td width="250px" height="50px" colspan="2" style="padding-top:30px; padding-bottom:10px;"><center>
+                    <input type="submit" value="Cancel" text-align:center style="height:40px; width:150px; padding-left:5px; font-size:15px;"> &nbsp;&nbsp;&nbsp;
+                    <input type="submit" value="Enter" text-align:center style="height:40px; width:150px; background-color:#003060; color:#FFFFFF; padding-left:5px; font-size:15px;">
+                </td></center>
+            </tr>
+        </form>
+        </table>
+    </section>
+</body>

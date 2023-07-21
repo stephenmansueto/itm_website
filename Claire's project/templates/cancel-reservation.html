@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <title> Matteo Table Reservation </title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='cancel-reservation.css') }}">
+    <script src="{{ url_for('static', filename='cancel-reservation.js') }}"></script>
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <a href="{{ url_for('welcomepage') }}">
+                <img src="{{ url_for('static', filename='all-images/temp-logo.png') }}" alt="Image" class="nav-logo">
+            </a>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="{{ url_for('welcomepage') }}">HOME</a></li>
+                    <li><a href="{{ url_for('about') }}">ABOUT</a></li>
+                    <li><a onclick="togglePopup()">RESERVE A TABLE</a></li>
+                    <li><a href="my-reservations.html">MY RESERVATIONS</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="temp-button">
+            <a onclick="togglePopup()">OPEN</a>
+        </div>
+        <div class="popup" id="pop-up cancel">
+            <div class="overlay"></div>
+            <div class="content">
+                <div class="close-btn" onclick="togglePopup()">&times;</div>
+                <div class="inside-box"></div>
+                <h2>CANCEL RESERVATION</h2>
+                <div class="instructions">
+                    <h3><b>Please read the message below before pushing through:</b></h3>
+                    <p>Are you sure you want to cancel your reservation? You will need to reserve a table again in order to change your previous reservation to your newly-desired timeslot.</p>
+                </div>
+                <div class="next-button">
+                    <a href="{{ url_for('birdseye') }}" class="continue" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">CANCEL</a>
+                </div>  
+            </div>
+        </div>
+    </section>
+</body>

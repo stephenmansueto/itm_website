@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <title> Matteo Table Reservation </title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='welcome-page.css') }}">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <a href="/templates/welcome-page.html">
+                <img src="all-images/temp-logo.png" alt="Image" class="nav-logo">
+            </a>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="/templates/about.html">ABOUT</a></li>
+                    <li><a href="/templates/reserve-table.html">RESERVE A TABLE</a></li>
+                    <li><a href="/templates/my-reservations.html">MY RESERVATIONS</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="title-box">
+            <h3>WELCOME TO</h3>
+            <h1 style="font-family: Ovo;">MATTEO UP!</h1>
+            <a href="/templates/reserve-table.html" class="res-table" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">RESERVE A TABLE</a>
+            <a href="/templates/my-reservations.html" class="my-reserve" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">MY RESERVATIONS</a>
+        </div>
+        <div class="blue-box">
+            <p>Ateneo de Manila University Loyola Heights Campus | Katipunan Avenue, Loyola Heights, Quezon City 1108, Philippines | Copyright 2023 </p>
+        </div>
+    </section>
+</body>

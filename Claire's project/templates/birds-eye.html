@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <title> Matteo Table Reservation </title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='birds-eye.css') }}">
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <a href="/templates/welcome-page.html">
+                <img src="all-images/temp-logo.png" alt="Image" class="nav-logo">
+            </a>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="/templates/about.html">ABOUT</a></li>
+                    <li><a href="/templates/reserve-table.html">RESERVE A TABLE</a></li>
+                    <li><a href="/templates/my-reservations.html">MY RESERVATIONS</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="entire-matteoup">
+            <div class="matteo-up-c">
+                <img class="c-image" src="all-images/birds-eye/matteo-c.png" alt="MatC">
+                <div class="c-overlay">
+                    <div class="c-title">Matteo C</div>
+                </div>
+            </div>
+
+            <div class="matteo-up-hall">
+                <img class="hall-image" src="all-images/birds-eye/hallway.png" alt="Hallway">
+                <div class="hall-overlay">
+                    <div class="hall-title">Main Hallway</div>
+                </div>
+            </div>
+
+            <div class="matteo-up-d">
+                <img class="d-image" src="all-images/birds-eye/matteo-d.png" alt="MatD">
+                <div class="d-overlay">
+                    <div class="d-title">Matteo D</div>
+                </div>
+            </div>
+        </div>
+        <div class="blue-box">
+            <p>Please click on the "Reserve a Table" tab in order to schedule on your preferred date and time!</p>
+        </div>
+    </section>
+</body>

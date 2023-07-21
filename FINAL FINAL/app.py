@@ -142,6 +142,8 @@ def my_reservations():
                 # Create an application context to use the db_session
         try:
             user_id = int(username)
+            if len(username)!=6:
+                return render_template('wrong-id.html')
         except ValueError:
             # Handle the case where the username is not a valid integer
             return render_template('wrong-id.html')
